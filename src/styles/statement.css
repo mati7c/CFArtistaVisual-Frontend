@@ -1,0 +1,42 @@
+.statement-container {
+  position: relative;
+  width: 100%;
+  min-height: 1300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../images/logotia-removebg-preview.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-bottom: 20px;
+  margin-top: 150px; /* Añade este margen superior (igual a la altura del header) */
+}
+
+.overlay {
+  position: absolute; /* Cambiado de fixed a absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.statement-content {
+  position: relative;
+  max-width: 600px;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  z-index: 2;
+  font-style: italic; /* Aplica cursiva a todo el contenido */
+}
+
+.statement-title {
+  font-size: 24px; /* Tamaño más grande */
+  font-weight: bold; /* Negrita */
+  font-family: 'Playfair Display', serif;
+}

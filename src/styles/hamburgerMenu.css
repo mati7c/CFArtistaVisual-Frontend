@@ -1,0 +1,84 @@
+/* Contenedor del menú de hamburguesa */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    margin-top: 1.5%;
+  }
+  
+  /* Botón de hamburguesa */
+/* Botón de hamburguesa */
+.hamburger-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000; /* Asegura que esté por debajo del botón de cierre */
+}
+  
+  /* Líneas del botón de hamburguesa */
+  .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #000; /* Color de las líneas */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Contenido del menú */
+/* Contenido del menú */
+.menu-content {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Menú fuera de la pantalla inicialmente */
+  width: 250px;
+  height: 100vh;
+  background-color: #E6D5B8; /* Color de fondo del menú */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px; /* Espacio para el botón de cierre */
+  z-index: 1001; /* Asegura que esté por debajo del botón de cierre */
+}
+  
+  /* Menú abierto */
+  .menu-content.open {
+    right: 0; /* Desplazar el menú hacia la izquierda */
+  }
+  
+  /* Estilos para los enlaces del menú */
+  .menu-content a {
+    color: #000; /* Color del texto */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-bottom: 1px solid #000; /* Línea divisoria */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover en los enlaces */
+  .menu-content a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo al pasar el mouse */
+  }
+
+  /* Botón de cierre (X) */
+/* Botón de cierre (X) */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #000; /* Color del símbolo "X" */
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002; /* Asegura que esté por encima del menú */
+}
+
+.close-button:hover {
+  color: #000000; /* Cambia el color al pasar el mouse */
+  z-index: 1001;
+}

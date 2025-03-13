@@ -1,0 +1,162 @@
+/* Asegura que el carrusel ocupe toda la pantalla */
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Asegura que el carrusel esté detrás del texto */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina paddings */
+}
+
+/* Estilos para las imágenes del carrusel */
+.carousel-container img {
+  width: 100%; /* Ocupa el 100% del ancho del contenedor */
+  height: 100%; /* Ocupa el 100% del alto del contenedor */
+  object-fit: cover; /* Cubre todo el espacio sin distorsionar la imagen */
+}
+
+/* Estilos para el contenido principal */
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20; /* Asegura que el texto esté por encima del carrusel */
+  text-align: center; /* Centra el texto */
+  width: 100%; /* Ocupa el ancho completo */
+}
+
+/* Contenedor para "Cecilia Ferreyra" */
+.nombre-container {
+  position: relative;
+  left: clamp(-200px, -10vw, -50px); /* Ajusta el desplazamiento lateral */
+}
+
+/* Contenedor para "Artista Visual" */
+.titulo-container {
+  position: relative;
+  margin-top: clamp(-60px, -3vh, -30px); /* Ajusta el margen superior */
+  right: clamp(-100px, -15vw, -100px); /* Ajusta el desplazamiento lateral */
+}
+
+/* Estilos para el texto */
+.centro {
+  font-size: clamp(3rem, 8vw, 5rem); /* Tamaño de fuente fluido */
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.centro2 {
+  font-size: clamp(1.5rem, 4vw, 2rem); /* Tamaño de fuente fluido */
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+
+
+.hinicio {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  background-color: #E6D5B8;
+  display: flex;
+  justify-content: space-between; /* Separa el logo y las opciones */
+  align-items: center;
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  position: fixed; /* Fija el header en la parte superior */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#logoinicio {
+  height: 150px;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre el logo y el texto */
+}
+
+.nombre {
+  font-size: 20px;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+/* Estilos para las opciones de navegación */
+.header-nav {
+  display: flex;
+  margin-left: 10%;
+  gap: 20px; /* Espacio entre las opciones */
+  margin-right: 20px; /* Margen a la derecha */
+}
+
+.header-nav a {
+  color: #000; /* Color del texto */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent; /* Línea divisoria invisible por defecto */
+  transition: border-color 0.3s ease;
+}
+
+.header-nav a:hover {
+  border-bottom: 1px solid #000; /* Línea divisoria visible al pasar el mouse */
+}
+
+.finicio {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 650px;
+  width: 100%;
+  height: 160px;
+  background-color: #E6D5B8;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  position: absolute; /* Añade esto */
+  z-index: 30; /* Asegura que el Footer esté por encima del carrusel */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-left: 50px; /* Añade un margen a la izquierda */
+}
+
+.icon {
+  color: black;
+  font-size: 3rem;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #be8c6b;
+}
+
+.icon.instagram:hover {
+  color: #be8c6b;
+}
+
+.icon.facebook:hover {
+  color: #be8c6b;
+}
+
+.icon.email:hover {
+  color: #be8c6b;
+}
