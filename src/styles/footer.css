@@ -10,9 +10,9 @@ footer {
   justify-content: left;
   align-items: center;
   font-size: 2rem;
-  font-family: Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   position: fixed; /* Añade esto */
-  z-index: 30; /* Asegura que el Footer esté por encima del carrusel */
+  z-index: 1000; /* Asegura que el Footer esté por encima del carrusel */
 }
 
 .social-icons {
@@ -20,6 +20,7 @@ footer {
   justify-content: center;
   gap: 100px;
   margin-left: 50px; /* Añade un margen a la izquierda */
+  margin-bottom: 30px;
 }
 
 .icon {

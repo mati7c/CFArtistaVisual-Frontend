@@ -1,0 +1,95 @@
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Asegura que el contenido esté centrado verticalmente */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Título */
+  .login-container h2 {
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Información del usuario */
+  .user-info {
+    background-color: #E6D5B8; /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .user-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  /* Botón de Agregar Obra */
+  .add-piece-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-piece-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botón de Cerrar Sesión */
+  .logout-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Botón de Iniciar Sesión con Google */
+  .google-login-button {
+    background-color: #E6D5B8;
+    color: #757575;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el texto */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .google-login-button:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .google-logo {
+    width: 20px;
+    height: 20px;
+  }

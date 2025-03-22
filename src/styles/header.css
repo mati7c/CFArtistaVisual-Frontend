@@ -11,9 +11,9 @@ header {
     justify-content: left;
     align-items: center;
     font-size: 2rem;
-    font-family: Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     position:relative;
-    z-index: 40;
+    z-index: 1000;
   }
   
   #logo {
@@ -30,5 +30,5 @@ header {
   .nombre {
     font-size: 20px;
     text-align: right;
-    font-family: 'Playfair Display', serif; /* Aplicar la fuente Great Vibes */
+    font-family: 'Josefin Sans', sans-serif; /* Aplicar la fuente Great Vibes */
   }

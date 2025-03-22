@@ -1,0 +1,84 @@
+/* Estilos para el contenedor principal */
+.procesos-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos para el título */
+  .procesos-h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: underline;
+    font-size: 23px;
+    margin-bottom: 30px;
+  }
+  
+  /* Contenedor para el carrusel y el texto */
+  .procesos-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  /* Estilos para el carrusel */
+  .procesos-slider {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+  
+  .procesos-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .procesos-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .procesos-slide img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+  }
+  
+  /* Estilos para el texto */
+  .procesos-texto {
+    width: 40%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    .procesos-content {
+      flex-direction: column; /* Cambia a columna en móviles */
+      align-items: center; /* Centra los elementos */
+    }
+  
+    .procesos-slider {
+      width: 100%; /* El carrusel ocupa el 100% del ancho */
+      max-width: none; /* Elimina el límite de ancho */
+    }
+  
+    .procesos-texto {
+      width: 100%; /* El texto ocupa el 100% del ancho */
+      margin-top: 20px; /* Espacio entre el carrusel y el texto */
+      text-align: center; /* Centra el texto en móviles */
+    }
+    .procesos-h2 {
+      font-family: 'Josefin Sans', sans-serif;
+        text-decoration: underline;
+        font-size: 23px;
+        margin-bottom: 30px;
+        margin-top: 45px;
+      }
+  }

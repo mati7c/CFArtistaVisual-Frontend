@@ -5,16 +5,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10; /* Asegura que el carrusel esté detrás del texto */
-  margin: 0; /* Elimina márgenes */
-  padding: 0; /* Elimina paddings */
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Asegura que no haya desbordamiento */
 }
 
-/* Estilos para las imágenes del carrusel */
 .carousel-container img {
-  width: 100%; /* Ocupa el 100% del ancho del contenedor */
-  height: 100%; /* Ocupa el 100% del alto del contenedor */
-  object-fit: cover; /* Cubre todo el espacio sin distorsionar la imagen */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Asegura que la imagen esté centrada */
 }
 
 /* Estilos para el contenido principal */
@@ -38,7 +39,7 @@ main {
 .titulo-container {
   position: relative;
   margin-top: clamp(-60px, -3vh, -30px); /* Ajusta el margen superior */
-  right: clamp(-100px, -15vw, -100px); /* Ajusta el desplazamiento lateral */
+  margin-left: 200px;
 }
 
 /* Estilos para el texto */
@@ -46,7 +47,7 @@ main {
   font-size: clamp(3rem, 8vw, 5rem); /* Tamaño de fuente fluido */
   font-weight: bold;
   color: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
@@ -54,7 +55,7 @@ main {
   font-size: clamp(1.5rem, 4vw, 2rem); /* Tamaño de fuente fluido */
   font-weight: bold;
   color: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Josefin Sans', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
@@ -68,10 +69,10 @@ main {
   height: 150px;
   background-color: #E6D5B8;
   display: flex;
-  justify-content: space-between; /* Separa el logo y las opciones */
+  justify-content: space-between; /* Separa el logo, las opciones y el ícono */
   align-items: center;
   font-size: 2rem;
-  font-family: Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   position: fixed; /* Fija el header en la parte superior */
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
@@ -89,23 +90,22 @@ main {
 .nombre {
   font-size: 20px;
   text-align: left;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
 }
 
 /* Estilos para las opciones de navegación */
 .header-nav {
   display: flex;
-  margin-left: 10%;
   gap: 20px; /* Espacio entre las opciones */
-  margin-right: 20px; /* Margen a la derecha */
+  margin-left: 300px;
 }
 
 .header-nav a {
   color: #000; /* Color del texto */
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Josefin Sans', sans-serif;
   padding: 5px 10px;
   border-bottom: 1px solid transparent; /* Línea divisoria invisible por defecto */
   transition: border-color 0.3s ease;
@@ -113,6 +113,20 @@ main {
 
 .header-nav a:hover {
   border-bottom: 1px solid #000; /* Línea divisoria visible al pasar el mouse */
+}
+
+/* Estilos para el ícono de login */
+.login-icon {
+  color: #000; /* Color del ícono */
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding-right: 20px;
+  transition: color 0.3s ease;
+  margin-left: 500px;
+}
+
+.login-icon:hover {
+  color: #555; /* Cambia el color al pasar el mouse */
 }
 
 .finicio {
@@ -127,7 +141,7 @@ main {
   justify-content: left;
   align-items: center;
   font-size: 2rem;
-  font-family: Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   position: absolute; /* Añade esto */
   z-index: 30; /* Asegura que el Footer esté por encima del carrusel */
 }
@@ -159,4 +173,61 @@ main {
 
 .icon.email:hover {
   color: #be8c6b;
+}
+.hamburger-menu-inicio {
+  position: fixed;
+  display: none;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  margin-top: 1.5%;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+  }
+
+  .carousel-container img {
+    height: 100vh; /* Asegura que la imagen ocupe toda la altura */
+    object-fit: cover; /* Cubre todo el espacio sin distorsionar la imagen */
+  }
+
+  .header {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 10px;
+  }
+
+  .titulo .nombre {
+    font-size: 1.3rem; /* Reduce el tamaño de la fuente */
+    margin-bottom: 10px; /* Espacio entre el logo y las opciones */
+    margin-right: 300px;
+
+  }
+
+  .header-nav {
+    display: none;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en móviles */
+    gap: 10px; /* Espacio entre columnas */
+    margin-right: 0; /* Elimina el margen derecho */
+  }
+
+  .header-nav a {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .login-icon {
+    margin-top: 10px; /* Espacio entre las opciones y el ícono */
+    margin-right: 60px;
+  }
+
+  .hamburger-menu-inicio {
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    margin-top: 1.5%;
+  }
 }

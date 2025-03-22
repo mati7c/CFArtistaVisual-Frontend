@@ -1,0 +1,122 @@
+.contacto {
+    width: 50%;
+    margin-left: 20px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 200px;
+  }
+  
+  .contactotitulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+  
+  .formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #e6d5b8;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #be8c6b;
+  }
+  
+  .iconos {
+    display: flex;
+    flex-direction: column;
+    font-size: 150%;
+    gap: 20px;
+    justify-content: center;
+    text-align: right;
+    margin-left: 1000px;
+    margin-top: -400px;
+    width: 0px;
+  }
+  
+  .icono i {
+    font-size: 5rem;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .icono:hover i {
+    color: #be8c6b;
+  }
+  
+  .icono span {
+    font-size: 1.1rem;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .icono a {
+    text-decoration: none;
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    .contacto {
+      width: 90%; /* Ajusta el ancho para móviles */
+      margin-left: 0; /* Elimina el margen izquierdo */
+      padding: 10px; /* Reduce el padding */
+      margin-bottom: 50px; /* Reduce el margen inferior */
+    }
+  
+    .iconos {
+      margin-left: 0; /* Elimina el margen izquierdo */
+      margin-top: 20px; /* Ajusta el margen superior */
+      width: 100%; /* Ocupa el 100% del ancho */
+      text-align: center; /* Centra los íconos */
+      flex-direction: row; /* Coloca los íconos en fila */
+      justify-content: center; /* Centra horizontalmente */
+      gap: 15px; /* Reduce el espacio entre íconos */
+    }
+  
+    .icono i {
+      font-size: 3rem; /* Reduce el tamaño de los íconos */
+    }
+  
+    .icono span {
+      display: none; /* Oculta el texto en móviles si es necesario */
+    }
+  }

@@ -1,0 +1,107 @@
+/* Contenedor principal */
+.add-piece-container {
+    max-width: 500px; /* Reducimos el ancho */
+    margin: 20px auto; /* Centramos y damos margen */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  /* Título del formulario */
+  .add-piece-title {
+    font-size: 1.8rem; /* Reducimos el tamaño */
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario */
+  .add-piece-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .image-warning {
+    color: gray;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  /* Grupo de campos del formulario */
+  .add-piece-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .add-piece-form .form-group label {
+    font-size: 0.9rem; /* Reducimos el tamaño */
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .add-piece-form .form-group input {
+    padding: 8px; /* Reducimos el padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reducimos el tamaño */
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .add-piece-form .form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Grupo de checkbox */
+  .add-piece-form .checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .add-piece-form .checkbox-group input {
+    width: auto;
+  }
+  
+  /* Botón de enviar */
+  .add-piece-form .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Reducimos el padding */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Reducimos el tamaño */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-piece-form .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .add-piece-container {
+      padding: 15px;
+    }
+  
+    .add-piece-title {
+      font-size: 1.5rem; /* Ajustamos el tamaño para móviles */
+    }
+  
+    .add-piece-form .form-group input {
+      padding: 6px; /* Ajustamos el padding para móviles */
+      font-size: 0.8rem; /* Ajustamos el tamaño para móviles */
+    }
+  
+    .add-piece-form .submit-button {
+      padding: 6px 12px; /* Ajustamos el padding para móviles */
+      font-size: 0.8rem; /* Ajustamos el tamaño para móviles */
+    }
+  }

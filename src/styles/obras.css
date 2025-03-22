@@ -1,0 +1,193 @@
+/* Contenedor principal */
+.obras-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px; /* Ajusta según la altura del header */
+    background-color: #d1cfcf; /* Fondo grisáceo claro */
+    min-height: calc(100vh - 150px); /* Asegura que el fondo cubra toda la pantalla */
+    padding-bottom: 0px; /* Espacio adicional en la parte inferior */
+  }
+  
+  /* Título de la página */
+  .obras-title {
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 40px;
+    color: #000;
+    padding-top: -10px; /* Espacio adicional arriba del título */
+  }
+  
+  /* Contenedor de las opciones */
+  .obras-options {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Espacio entre las opciones */
+    flex-wrap: wrap; /* Para que sea responsive */
+    padding: 20px; /* Espacio interno para separar del fondo */
+  }
+  
+  /* Cada opción (Pintura, Dibujo, Textil) */
+  .obra-option {
+    width: 300px; /* Ancho fijo para cada opción */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s ease; /* Efecto de escala al pasar el mouse */
+    background-color: transparent; /* Fondo blanco para cada opción */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno */
+  }
+  
+  .obra-option:hover {
+    transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+  }
+  
+  /* Contenedor de la imagen */
+  .image-container {
+    width: 300px; /* Ancho fijo */
+    height: 300px; /* Alto fijo */
+    overflow: hidden; /* Oculta el exceso de la imagen */
+    border-radius: 10px;
+  }
+  
+  /* Imagen de cada opción */
+  .obra-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  }
+  
+  /* Descripción de cada opción */
+  .obra-description {
+    font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 15px; /* Aumenta el espacio entre la imagen y la descripción */
+    color: #000;
+  }
+
+  /* Fondo oscuro cuando se muestra el carrusel */
+.dark-background {
+  background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro no negro */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ocultar las opciones anteriores cuando el carrusel está abierto */
+.dark-background .obras-options {
+  display: none;
+}
+
+/* Contenedor del carrusel */
+.carrusel-overlay {
+  position: fixed; /* Cambiado a fixed para que esté por encima de todo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  filter: none;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 9000px;
+  width: 100%;
+  z-index: 2001; /* Mayor que el fondo oscuro */
+
+}
+
+/* Botón para cerrar el carrusel */
+.close-button1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+.close-button1:hover {
+  color: #000000; /* Cambia el color al pasar el mouse */
+  background-color: #ffffff;
+}
+
+
+/* Contenedor del carrusel */
+.carrusel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Imagen de la obra en el carrusel */
+.obra-carousel-image {
+  max-width: 800px; /* Mantiene las dimensiones originales */
+  height: 500px;
+  border-radius: 10px;
+  margin-bottom: 20%;
+  object-fit: cover;
+}
+
+/* Detalles de la obra (fijos) */
+.obra-details {
+  margin-top: 20px; /* Espacio entre la imagen y los detalles */
+  text-align: center;
+  color: #ffffff;
+  position: absolute; /* Fija los detalles en su lugar */
+  bottom: 20px; /* Ajusta la posición vertical */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  background-color: transparent; /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.obra-details h2 {
+  font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-bottom: 50%;
+}
+
+.obra-details p {
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.image-container1:hover {
+  transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+}
+
+/* Ocultar el título cuando el carrusel está abierto */
+.dark-background .obras-title {
+  display: none;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .obras-container {
+    padding-top: 880px;
+    padding-bottom: 100px; /* Espacio adicional en la parte superior */
+  }
+
+  .obra-details {
+    margin-top: 20px; /* Espacio entre la imagen y los detalles */
+    text-align: center;
+    color: #ffffff;
+    position: absolute; /* Fija los detalles en su lugar */
+    bottom: -180px; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    background-color: transparent; /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+}
