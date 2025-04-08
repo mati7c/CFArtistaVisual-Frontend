@@ -31,4 +31,6 @@ header {
     font-size: 20px;
     text-align: right;
     font-family: 'Josefin Sans', sans-serif; /* Aplicar la fuente Great Vibes */
+    color: #000;
+    text-decoration: none;
   }

@@ -1,24 +1,28 @@
 import React from "react";
 import { GoogleLogin } from "@react-oauth/google";
-import axios from "axios";
+import { handleGoogleLogin } from "../services/authService";
 
 const Login = ({ setUser, setIsAdmin }) => {
-  const handleLoginSuccess = async (response) => {
+  const onLoginSuccess = async (response) => {
     try {
-        const token = response.credential;
-        const res = await axios.post("http://localhost:8080/auth/login", 
-            { token }, 
-            { withCredentials: true }
-        );
-        console.log("Login exitoso:", res.data);
+      const userData = await handleGoogleLogin(response.credential);
+      console.log("Login exitoso:", userData);
+
+      // Si querés setear datos del usuario o admin:
+      setUser(userData.name);
+      setIsAdmin(userData.roles?.includes("ADMIN"));
     } catch (error) {
-        console.error("Error en login:", error);
+      console.error("Login fallido");
     }
-};
+  };
+
   return (
     <div>
       <h1>Iniciar Sesión</h1>
-      <GoogleLogin onSuccess={handleLoginSuccess} onError={() => console.log("Error en login")} />
+      <GoogleLogin
+        onSuccess={onLoginSuccess}
+        onError={() => console.log("Error en login")}
+      />
     </div>
   );
 };

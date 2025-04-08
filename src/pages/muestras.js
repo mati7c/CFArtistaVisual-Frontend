@@ -1,39 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // Importa Axios
-import Layout from './Layout'; // Importa el Layout
-import '../styles/muestras.css'; // Importa los estilos
+import React, { useEffect, useState } from "react";
+import Layout from "./Layout";
+import "../styles/muestras.css";
+import { fetchExhibitList } from "../services/exhibitService"; // ✅ Importa la función del service
 
 const Muestras = () => {
-  const [muestras, setMuestras] = useState([]); // Estado para almacenar las muestras
-  const [loading, setLoading] = useState(true); // Estado para manejar la carga
-  const [error, setError] = useState(null); // Estado para manejar errores
+  const [muestras, setMuestras] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Función para obtener las muestras del endpoint usando Axios
-  const fetchMuestras = async () => {
+  const loadMuestras = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/exhibit/list'); // Hacer la solicitud GET
-      setMuestras(response.data); // Guardar las muestras en el estado
+      const data = await fetchExhibitList(); // ✅ Usamos el service
+      setMuestras(data);
     } catch (error) {
-      setError(error.message); // Guardar el error
+      setError("No se pudieron cargar las muestras.");
     } finally {
-      setLoading(false); // Finalizar la carga
+      setLoading(false);
     }
   };
 
-  // Efecto para cargar las muestras al montar el componente
   useEffect(() => {
-    fetchMuestras();
+    loadMuestras();
   }, []);
 
-  // Mostrar un mensaje de carga mientras se obtienen los datos
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
-
-  // Mostrar un mensaje de error si algo falla
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  if (loading) return <div>Cargando...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <Layout>

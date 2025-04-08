@@ -1,42 +1,36 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Layout from "./Layout"; // Importa el Layout
-import "../styles/editPiece.css"; // Archivo CSS para estilos
+import Layout from "./Layout";
+import "../styles/editPiece.css";
+import { fetchPieceList, deletePiece } from "../services/pieceService"; // Importamos del service
 
 const EditPiece = () => {
-  const [obras, setObras] = useState([]); // Estado para almacenar las obras
+  const [obras, setObras] = useState([]);
 
-  // Consume el endpoint para obtener las obras
   useEffect(() => {
-    const fetchObras = async () => {
+    const getObras = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/piece/list" 
-            )
-        setObras(response.data);
+        const data = await fetchPieceList();
+        setObras(data);
       } catch (error) {
-        console.error("Error fetching obras:", error);
+        alert("Error al cargar las obras");
       }
     };
 
-    fetchObras();
+    getObras();
   }, []);
 
-  // Función para manejar la eliminación de una obra
   const handleDelete = async (id, name) => {
     const confirmDelete = window.confirm(`¿Estás seguro de eliminar la obra "${name}"?`);
     if (confirmDelete) {
-      try {
-        await axios.delete(`http://localhost:8080/piece/delete/${id}`, {withCredentials: true});
+      const success = await deletePiece(id);
+      if (success) {
         alert("Obra eliminada con éxito");
-        setObras(obras.filter((obra) => obra.id !== id)); // Actualiza la lista de obras
-      } catch (error) {
-        console.error("Error deleting obra:", error);
+        setObras(obras.filter((obra) => obra.id !== id));
+      } else {
         alert("Error al eliminar la obra");
       }
     }
   };
-
-
 
   return (
     <Layout>
@@ -56,8 +50,9 @@ const EditPiece = () => {
           ))}
         </ul>
       </div>
-      <div> .</div>
+      <div>.</div>
     </Layout>
   );
 };
+
 export default EditPiece;
