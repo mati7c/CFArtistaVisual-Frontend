@@ -1,2 +1,2 @@
 
-export const BASE_API_URL = "https://ceciferreyraart-backend.onrender.com";
+export const BASE_API_URL = "https://localhost:8080";
