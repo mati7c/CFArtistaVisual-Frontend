@@ -10,7 +10,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Solo se ejecuta si el usuario ya está logueado (el backend lo sabe por la cookie)
     getUserInfo()
       .then((data) => setUser(data))
       .catch(() => setUser(null));
