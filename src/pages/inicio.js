@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Importa los estilos del carrusel
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Fondo_2 from "../images/Fondo -2.jpeg";
 import Fondo_1 from "../images/Fondo -1.jpeg";
 import Fondo0 from "../images/Fondo 0.jpeg";
@@ -15,29 +15,24 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 const images = [Fondo0, Fondo_1, Fondo_2, Fondo1, Fondo2, Fondo3];
 
 const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false); // Estado para controlar si el menú está abierto
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Alternar entre abrir y cerrar el menú
+    setIsOpen(!isOpen);
   };
 
   return (
     <div className="hamburger-menu-inicio">
-      {/* Botón de hamburguesa */}
       <button className="hamburger-icon" onClick={toggleMenu}>
         <div className="hamburger-line"></div>
         <div className="hamburger-line"></div>
         <div className="hamburger-line"></div>
       </button>
 
-      {/* Menú desplegable */}
       <div className={`menu-content ${isOpen ? "open" : ""}`}>
-        {/* Botón de cierre (X) */}
         <button className="close-button" onClick={toggleMenu}>
-          &times; {/* Símbolo de "X" */}
+          &times;
         </button>
-
-        {/* Opciones del menú */}
         <Link to="/" onClick={toggleMenu}>Inicio</Link>
         <Link to="/bio" onClick={toggleMenu}>Bio</Link>
         <Link to="/obras" onClick={toggleMenu}>Obras</Link>
@@ -45,40 +40,46 @@ const HamburgerMenu = () => {
         <Link to="/procesos" onClick={toggleMenu}>Procesos</Link>
         <Link to="/statement" onClick={toggleMenu}>Statement</Link>
         <Link to="/contacto" onClick={toggleMenu}>Contacto</Link>
-        
       </div>
     </div>
   );
 };
 
-// Header específico para Inicio
-const HeaderInicio = () => (
-  <header className="header">
-    {/* Logo y nombre */}
-    <div className="titulo">
-      <p className="nombre">Cecilia Ferreyra Artista Visual</p>
-    </div>
+// Header específico para Inicio con verificación de cookie
+const HeaderInicio = () => {
+  const [loginLink, setLoginLink] = useState("/login-google");
 
-    {/* Opciones de navegación */}
-    <nav className="header-nav">
-      <Link to="/">Inicio</Link>
-      <Link to="/bio">Bio</Link>
-      <Link to="/obras">Obras</Link>
-      <Link to="/muestras">Muestras</Link>
-      <Link to="/procesos">Procesos</Link>
-      <Link to="/statement">Statement</Link>
-      <Link to="/contacto">Contacto</Link>
-    </nav>
+  useEffect(() => {
+    const cookies = document.cookie;
+    console.log(document.cookie)
+    if (cookies.includes("JSESSIONID")) {
+      setLoginLink("/login");
+    }
+  }, []);
 
-    {/* Ícono de login */}
-    <Link to="/login" className="login-icon">
-      <FontAwesomeIcon icon={faUser} size="lg" />
-    </Link>
-  </header>
-);
+  return (
+    <header className="header">
+      <div className="titulo">
+        <p className="nombre">Cecilia Ferreyra Artista Visual</p>
+      </div>
 
+      <nav className="header-nav">
+        <Link to="/">Inicio</Link>
+        <Link to="/bio">Bio</Link>
+        <Link to="/obras">Obras</Link>
+        <Link to="/muestras">Muestras</Link>
+        <Link to="/procesos">Procesos</Link>
+        <Link to="/statement">Statement</Link>
+        <Link to="/contacto">Contacto</Link>
+      </nav>
 
-// Footer específico para Inicio
+      <Link to={loginLink} className="login-icon">
+        <FontAwesomeIcon icon={faUser} size="lg" />
+      </Link>
+    </header>
+  );
+};
+
 const FooterInicio = () => (
   <div className="finicio">
     <div className="social-icons">
@@ -98,10 +99,8 @@ const FooterInicio = () => (
 export default function Inicio() {
   return (
     <div id="inicio" className="relative w-full h-full flex-grow">
-      {/* Header específico para Inicio */}
       <HeaderInicio />
-      <HamburgerMenu /> {/* Menú de hamburguesa */}
-      {/* Carrusel de fondo */}
+      <HamburgerMenu />
       <Carousel
         showArrows={false}
         showStatus={false}
@@ -111,7 +110,7 @@ export default function Inicio() {
         interval={4000}
         transitionTime={1000}
         stopOnHover={false}
-        className="carousel-container" // Clase adicional para el carrusel
+        className="carousel-container"
       >
         {images.map((image, index) => (
           <div key={index} className="h-full">
@@ -124,7 +123,6 @@ export default function Inicio() {
         ))}
       </Carousel>
 
-      {/* Contenido principal (main) */}
       <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
         <div className="nombre-container">
           <p className="centro text-5xl font-bold">Cecilia Ferreyra</p>
@@ -134,7 +132,6 @@ export default function Inicio() {
         </div>
       </main>
 
-      {/* Footer específico para Inicio */}
       <FooterInicio />
     </div>
   );

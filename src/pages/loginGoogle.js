@@ -1,30 +1,23 @@
+// LoginGoogle.jsx
 import React from "react";
-import { GoogleLogin } from "@react-oauth/google";
-import { handleGoogleLogin } from "../services/authService";
+import "../styles/login.css";
+import logoGoogle from "../images/logo-google.png";
+import {login} from "../services/authService";
+import Layout from "./Layout";
 
-const Login = ({ setUser, setIsAdmin }) => {
-  const onLoginSuccess = async (response) => {
-    try {
-      const userData = await handleGoogleLogin(response.credential);
-      console.log("Login exitoso:", userData);
-
-      // Si querés setear datos del usuario o admin:
-      setUser(userData.name);
-      setIsAdmin(userData.roles?.includes("ADMIN"));
-    } catch (error) {
-      console.error("Login fallido");
-    }
-  };
+const LoginG = () => {
 
   return (
-    <div>
-      <h1>Iniciar Sesión</h1>
-      <GoogleLogin
-        onSuccess={onLoginSuccess}
-        onError={() => console.log("Error en login")}
-      />
+    <Layout>
+    <div className="login-container">
+      <h2>Bienvenido a Cecilia Ferreyra Artista Visual</h2>
+      <button className="google-login-button" onClick={login}>
+        <img src={logoGoogle} alt="Google Logo" className="google-logo" />
+        Iniciar Sesión con Google
+      </button>
     </div>
+    </Layout>
   );
 };
 
-export default Login;
+export default LoginG;

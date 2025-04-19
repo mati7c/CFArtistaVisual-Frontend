@@ -9,6 +9,7 @@ import Statement from "./pages/statement";
 import Obras from "./pages/obras";
 import ObraDetalle from "./pages/obraDetalle"
 import Login from "./pages/login";
+import LoginG from "./pages/loginGoogle";
 import AddPiece from "./pages/addPiece";
 import EditPiece from "./pages/editPiece";
 import AddExhibit from "./pages/addExhibit";
@@ -27,6 +28,7 @@ function App() {
         <Route path='/obra/:id' element={<ObraDetalle />} />
         <Route path='/obras' element={<Obras />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/login-google' element={<LoginG />} />
         <Route path='/addPiece' element={<AddPiece />} />
         <Route path='/editPiece' element={<EditPiece />} />
         <Route path='/addExhibit' element={<AddExhibit />} />

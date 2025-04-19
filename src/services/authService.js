@@ -21,7 +21,7 @@ export const logout = async () => {
 
 // Obtener info del usuario autenticado
 export const getUserInfo = async () => {
-    try {
+    try {      
         const response = await axios.get(`${API_URL}/user/info`, { withCredentials: true });
         return response.data;
     } catch (error) {
@@ -29,13 +29,3 @@ export const getUserInfo = async () => {
     }
 };
 
-// 🔽 Login con Google One-Tap o Login manual (token-based)
-export const handleGoogleLogin = async (googleCredential) => {
-    try {
-        const response = await axios.post(`${API_URL}/auth/login`, { token: googleCredential }, { withCredentials: true });
-        return response.data;
-    } catch (error) {
-        console.error("Error en login:", error);
-        throw error;
-    }
-};
