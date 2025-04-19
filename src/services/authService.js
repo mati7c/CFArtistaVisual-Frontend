@@ -15,7 +15,7 @@ export const logout = async () => {
         await axios.post(`${API_URL}/api/logout`, {}, { withCredentials: true });
         window.location.href = "/";
     } catch (error) {
-        console.error("Error al cerrar sesión:", error);
+        console.error("Error al cerrar sesion:", error);
     }
 };
 
