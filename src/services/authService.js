@@ -9,7 +9,6 @@ export const login = () => {
     window.location.href = `${API_URL}/oauth2/authorization/google`;
 };
 
-// Logout
 export const logout = async () => {
     try {
         await axios.post(`${API_URL}/api/logout`, {}, { withCredentials: true });
