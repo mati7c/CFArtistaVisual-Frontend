@@ -6,7 +6,7 @@ const API_URL = `${BASE_API_URL}`;
 
 // Redirecciona al login con Google (usado si se usa login por redirect)
 export const login = () => {
-    window.location.href = `${API_URL}/oauth2/authorization/google`;
+    window.location.href = `https://ceciferreyra-little-glitter-451.fly.dev/oauth2/authorization/google`;
 };
 
 export const logout = async () => {
@@ -21,7 +21,7 @@ export const logout = async () => {
 // Obtener info del usuario autenticado
 export const getUserInfo = async () => {
     try {      
-        const response = await axios.get(`${API_URL}/user/info`, { withCredentials: true });
+        const response = await axios.get(`https://ceciferreyra-little-glitter-451.fly.dev/user/info`, { withCredentials: true });
         return response.data;
     } catch (error) {
         return null;
