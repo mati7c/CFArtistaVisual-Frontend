@@ -24,7 +24,7 @@ const Login = () => {
             <p><strong>Nombre:</strong> {user.name}</p>
             <p><strong>Email:</strong> {user.email}</p>
 
-            {(user.email === "matic1087@gmail.com" || user.email === "ceciliaferreyra74@gmail.com") && (
+            {(user.email === "matic1087@gmail.com" || user.email === "ceciliaferreyra74@gmail.com" || user.login === "mati7c" || user.email === "ceciliaferreyra74") && (
               <>
                 <button className="add-piece-button" onClick={() => navigate("/addPiece")}>
                   Agregar Obra

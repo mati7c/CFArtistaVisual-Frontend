@@ -79,6 +79,7 @@
     font-size: 1rem;
     cursor: pointer;
     display: flex;
+    margin-bottom: 10px;
     align-items: center;
     gap: 10px; /* Espacio entre el logo y el texto */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;

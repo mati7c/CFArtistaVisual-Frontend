@@ -8,6 +8,9 @@ const API_URL = `${BASE_API_URL}`;
 export const login = () => {
     window.location.href = `${API_URL}/oauth2/authorization/google`;
 };
+export const logingh = () => {
+    window.location.href = `${API_URL}/oauth2/authorization/github`;
+};
 
 export const logout = async () => {
     try {
