@@ -8,7 +8,7 @@ export const addPiece = async (pieceData) => {
   try {
     const formData = new FormData();
     for (const key in pieceData) {
-      if (key === "images") {
+      if (key === "images" && pieceData.images) {
         Array.from(pieceData.images).forEach((file) =>
           formData.append("images", file)
         );
@@ -62,7 +62,7 @@ export const deletePiece = async (id) => {
   }
 };
 
-// Obtener obras por typeId
+// Obtener obras filtradas por typeId
 export const getObrasByType = async (typeId) => {
   try {
     const response = await axios.get(`${API_URL}/list`);
@@ -71,7 +71,7 @@ export const getObrasByType = async (typeId) => {
     );
     return filteredObras;
   } catch (error) {
-    console.error("Error obteniendo obras:", error);
+    console.error("Error obteniendo obras por tipo:", error);
     return [];
   }
 };

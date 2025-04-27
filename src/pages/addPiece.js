@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { addPiece } from "../services/pieceService";
 import { useNavigate } from "react-router-dom";
-import Layout from "./Layout"; // Importa el Layout
-import "../styles/addPiece.css"; // Archivo CSS para estilos
+import Layout from "./Layout"; 
+import "../styles/addPiece.css";
 
 const AddPiece = () => {
   const [formData, setFormData] = useState({
     name: "",
     year: "",
     technique: "",
-    typeId: "", // Cambiamos a string para manejar el valor del select
+    typeId: "", 
     available: false,
     measures: "",
     images: null,
@@ -83,6 +83,7 @@ const AddPiece = () => {
               id="typeId"
               name="typeId"
               onChange={handleChange}
+              value={formData.typeId}
               required
             >
               <option value="">Seleccione un tipo</option>
@@ -110,6 +111,7 @@ const AddPiece = () => {
               type="checkbox"
               id="available"
               name="available"
+              checked={formData.available}
               onChange={handleChange}
             />
           </div>
@@ -124,7 +126,7 @@ const AddPiece = () => {
               onChange={handleChange}
               required
             />
-            <p className="image-warning">Las/la imagen debe tener un tamaño menor a 2MB.</p>
+            <p className="image-warning">Las imágenes deben pesar menos de 2MB.</p>
           </div>
 
           <button type="submit" className="submit-button">
