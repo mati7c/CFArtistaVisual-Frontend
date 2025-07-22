@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../styles/obraDetalle.css";
 import Layout from './Layout';
+
 import { fetchPieceById } from "../services/pieceService"; // Ahora usamos el service
 
 const ObraDetalle = () => {
@@ -44,16 +45,15 @@ const ObraDetalle = () => {
     backgroundSize: "cover",
     backgroundPosition: "center",
     filter: "blur(10px) grayscale(65%)",
-    position: "fixed",
+    scale: 1.5,
     left: 0,
-    width: "100%",
+    width: "80%",
     height: "100vh",
-    top: "-250px",
     zIndex: -1,
   };
 
   return (
-    <Layout>
+      <Layout>
       <div className="obra-detalle-container2">
         <div className="background-image" style={backgroundStyle}></div>
         <div className="mini-carrusel">
@@ -81,7 +81,7 @@ const ObraDetalle = () => {
           </div>
         </div>
       </div>
-    </Layout>
+      </Layout>      
   );
 };
 

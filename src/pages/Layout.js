@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
       <Header /> {/* Header en la parte superior */}
       <HamburgerMenu /> {/* Menú de hamburguesa */}
       <main className="flex-grow" >{children}</main> {/* Contenido principal con margen superior */}
-      <Footer /> {/* Footer en la parte inferior */}
     </div>
   );
 };

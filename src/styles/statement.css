@@ -10,7 +10,6 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin-bottom: 20px;
   margin-top: 200px; /* Añade este margen superior (igual a la altura del header) */
 }
 
@@ -51,12 +50,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('../images/logotia-removebg-preview.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin-bottom: 20px;
-    margin-top: 300px; /* Añade este margen superior (igual a la altura del header) */
+    margin-top: 700px; /* Añade este margen superior (igual a la altura del header) */
   }
 
 }

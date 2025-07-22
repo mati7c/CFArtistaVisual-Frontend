@@ -1,8 +1,11 @@
 /* Fondo gris claro */
+
+
 body {
     background-color: #d1cfcf;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
   
   .obra-detalle-container2 {
@@ -63,42 +66,26 @@ body {
     color: #555; /* Color de texto más suave */
   }
   
-  .disponibilidad {
-    font-size: 1.2em;
-    color: #333; /* Color de texto más oscuro */
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
-    padding: 0px; /* Aumentamos el padding interno */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-top: 180px; /* Reducimos el espacio superior */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    text-align: center; /* Centramos el texto */
-    max-width: 600px; /* Limitamos el ancho máximo para que no sea demasiado grande */
-    margin-left: 10px; /* Centramos horizontalmente */
-    margin-right: auto; /* Centramos horizontalmente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
-  }
+    .background-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin-top: 10%;
   
-  .disponibilidad a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold; /* Texto en negrita para el enlace */
-    display: inline-block; /* Hacemos que el enlace sea un bloque en línea */
-    margin-top: 10px; /* Espacio superior para el enlace */
-  }
-  
-  .disponibilidad a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-  }
+      transform: none; /* Elimina el scale que causa problemas */
+    }
+
   
   /* Estilos responsivos */
-  @media (max-width: 768px) {
+  @media (max-width: 400px) {
     .obra-detalle-container2 {
       flex-direction: column; /* Cambia a columna en pantallas pequeñas */
       align-items: center; /* Centra los elementos */
-      gap: 20px; /* Reduce el espacio entre elementos */
-      margin-top: 760px;
-      padding-bottom: 130px;
+      gap: 30px; /* Reduce el espacio entre elementos */
+      margin-top: 700px;
+      padding-bottom: 20px;
+     
+      max-width: 100%;
     }
   
     .mini-carrusel {
@@ -106,25 +93,22 @@ body {
       max-width: 400px; /* Pero no supera el tamaño fijo */
     }
     .background-image {
-      position: absolute; /* Cambia a absoluto en móviles para que se desplace con el contenido */
-      height: auto; /* Ajusta la altura automáticamente */
-      margin-top: 950px;
-      transform: scale(2);
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      margin-top: 100px;
+      
     }
   
     .obra-details2 {
       text-align: center; /* Centra el texto en pantallas pequeñas */
     }
 
-    .disponibilidad {
-      font-size: 1.2em;
-      color: #333; /* Color de texto más oscuro */
-      font-family: 'Josefin Sans', sans-serif;
-      background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
-      padding: 0px; /* Espacio interno */
-      border-radius: 10px; /* Bordes redondeados */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
-      margin-top: 10px; /* Espacio superior */
-  
+   .hamburger-menu{
+    box-sizing: border-box;
+    margin-right: 5px;
+   }
+    body{
+      overflow-x: hidden;
     }
   }

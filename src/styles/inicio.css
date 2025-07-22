@@ -1,4 +1,5 @@
 /* Asegura que el carrusel ocupe toda la pantalla */
+
 .carousel-container {
   position: absolute;
   top: 0;
@@ -9,13 +10,51 @@
   margin: 0;
   padding: 0;
   overflow: hidden; /* Asegura que no haya desbordamiento */
+  object-fit: cover;
 }
 
 .carousel-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center; /* Asegura que la imagen esté centrada */
+  object-position: center;
+  transform: scale(1); /* Escala inicial */
+  transition: transform 0.5s ease; /* Transición suave para evitar saltos */
+}
+
+/* Zoom progresivo al reducir el ancho de pantalla */
+@media (max-width: 1800px) {
+  .carousel-container img {
+    transform: scale(1.4);
+  }
+}
+@media (max-width: 1200px) {
+  .carousel-container img {
+    transform: scale(1.05);
+  }
+}
+@media (max-width: 1200px) {
+  .carousel-container img {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-container img {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container img {
+    transform: scale(1.15);
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-container img {
+    transform: scale(1.2);
+  }
 }
 
 /* Estilos para el contenido principal */
@@ -58,8 +97,6 @@ main {
   font-family: 'Josefin Sans', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
 }
-
-
 
 .hinicio {
   padding-left: 20px;
@@ -122,7 +159,7 @@ main {
   font-size: 1.5rem;
   padding-right: 20px;
   transition: color 0.3s ease;
-  margin-left: 500px;
+  margin-left: 200px;
 }
 
 .login-icon:hover {
@@ -142,15 +179,15 @@ main {
   align-items: center;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
-  position: absolute; /* Añade esto */
-  z-index: 30; /* Asegura que el Footer esté por encima del carrusel */
+  position: absolute;
+  z-index: 30;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 100px;
-  margin-left: 50px; /* Añade un margen a la izquierda */
+  margin-left: 50px;
 }
 
 .icon {
@@ -174,6 +211,7 @@ main {
 .icon.email:hover {
   color: #be8c6b;
 }
+
 .hamburger-menu-inicio {
   position: fixed;
   display: none;
@@ -183,43 +221,42 @@ main {
   margin-top: 1.5%;
 }
 
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .carousel-container {
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
   }
 
   .carousel-container img {
-    height: 100vh; /* Asegura que la imagen ocupe toda la altura */
-    object-fit: cover; /* Cubre todo el espacio sin distorsionar la imagen */
+    height: 100vh;
+    object-fit: cover;
   }
 
   .header {
-    flex-direction: column; /* Apila los elementos verticalmente */
+    flex-direction: column;
     padding: 10px;
   }
 
   .titulo .nombre {
-    font-size: 1.3rem; /* Reduce el tamaño de la fuente */
-    margin-bottom: 10px; /* Espacio entre el logo y las opciones */
-    margin-right: 300px;
-
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-right: 240px;
   }
 
   .header-nav {
     display: none;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en móviles */
-    gap: 10px; /* Espacio entre columnas */
-    margin-right: 0; /* Elimina el margen derecho */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-right: 0;
   }
 
   .header-nav a {
-    font-size: 1rem; /* Reduce el tamaño de la fuente */
-    text-align: center; /* Centra el texto */
+    font-size: 1rem;
+    text-align: center;
   }
 
   .login-icon {
-    margin-top: 10px; /* Espacio entre las opciones y el ícono */
-    margin-right: 60px;
+    margin-left: 88%;
   }
 
   .hamburger-menu-inicio {
@@ -229,5 +266,96 @@ main {
     right: 20px;
     z-index: 1001;
     margin-top: 1.5%;
+
+  }
+  .nombre-container {
+    position: relative;
+    left: clamp(00px, 10vw, -50px); /* Ajusta el desplazamiento lateral */
+  }
+  .titulo-container {
+    position: relative;
+    margin-top: clamp(-60px, 3vh, -30px); /* Ajusta el margen superior */
+    margin-left: 200px;
   }
 }
+
+@media (max-width: 345px) {
+  .carousel-container {
+    height: 100vh;
+  }
+
+  .carousel-container img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .titulo .nombre {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-right: 100px;
+  }
+
+  .header-nav {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .header-nav a {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .login-icon {
+    margin-left: 88%;
+  }
+
+  .hamburger-menu-inicio {
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    margin-top: 1.5%;
+
+  }
+  .nombre-container {
+    position: relative;
+    left: clamp(00px, 10vw, -50px); /* Ajusta el desplazamiento lateral */
+  }
+  .titulo-container {
+    position: relative;
+    margin-top: clamp(-60px, 3vh, -30px); /* Ajusta el margen superior */
+    margin-left: 200px;
+  }
+  .finicio {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 650px;
+    width: 100%;
+    height: 160px;
+    background-color: #E6D5B8;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    z-index: 30;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-right: 100px;
+  }
+  
+}
+

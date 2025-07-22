@@ -3,7 +3,7 @@
   margin: 0 auto; /* Centrar el contenedor */
   padding: 20px;
   box-sizing: border-box;
-
+  margin-top: 600px;
 }
 
 .biografia-h2 {
@@ -53,7 +53,7 @@
     font-size: 2rem;
     text-align: center;
     text-decoration: underline;
-    margin-top: 4260px;
+    margin-top: 900%;
   }
 
 }

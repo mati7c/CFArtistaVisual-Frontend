@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    margin-top: 200px;
   }
   
   /* Estilos para el título */
@@ -62,11 +63,13 @@
     .procesos-content {
       flex-direction: column; /* Cambia a columna en móviles */
       align-items: center; /* Centra los elementos */
+
     }
   
     .procesos-slider {
       width: 100%; /* El carrusel ocupa el 100% del ancho */
       max-width: none; /* Elimina el límite de ancho */
+      
     }
   
     .procesos-texto {
@@ -79,6 +82,6 @@
         text-decoration: underline;
         font-size: 23px;
         margin-bottom: 30px;
-        margin-top: 45px;
+        margin-top: 30%;
       }
   }

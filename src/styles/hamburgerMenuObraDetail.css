@@ -32,7 +32,7 @@
 .menu-content {
   position: fixed;
   top: 0;
-  right: -300px; 
+  right: -300px; /* Menú fuera de la pantalla inicialmente */
   width: 250px;
   height: 100vh;
   background-color: #E6D5B8; /* Color de fondo del menú */

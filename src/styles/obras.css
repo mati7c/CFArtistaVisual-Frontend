@@ -173,6 +173,7 @@
   .obras-container {
     padding-top: 880px;
     padding-bottom: 100px; /* Espacio adicional en la parte superior */
+    margin-top: 400px;
   }
 
   .obra-details {

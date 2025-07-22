@@ -100,6 +100,7 @@
       margin-left: 0; /* Elimina el margen izquierdo */
       padding: 10px; /* Reduce el padding */
       margin-bottom: 50px; /* Reduce el margen inferior */
+      margin-top: 200px;
     }
   
     .iconos {

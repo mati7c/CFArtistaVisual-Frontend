@@ -44,3 +44,53 @@ footer {
 .icon.email:hover {
   color: #be8c6b;
 }
+
+
+@media (max-width: 768px){
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 170%;
+  width: 100%;
+  height: 160px;
+  background-color: #E6D5B8;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  position: fixed; /* Añade esto */
+  z-index: 1000; /* Asegura que el Footer esté por encima del carrusel */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-left: 50px; /* Añade un margen a la izquierda */
+  margin-bottom: 30px;
+}
+
+.icon {
+  color: black;
+  font-size: 3rem;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #be8c6b;
+}
+
+.icon.instagram:hover {
+  color: #be8c6b;
+}
+
+.icon.facebook:hover {
+  color: #be8c6b;
+}
+
+.icon.email:hover {
+  color: #be8c6b;
+}
+}
