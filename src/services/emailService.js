@@ -1,7 +1,6 @@
 import axios from "axios";
-import { BASE_API_URL } from "../api/config";
 
-const API_URL = `${BASE_API_URL}/email`;
+const API_URL = `http://64.176.18.90:8080/email`;
 
 export const sendEmail = async (formData) => {
   try {

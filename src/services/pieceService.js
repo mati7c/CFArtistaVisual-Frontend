@@ -1,7 +1,6 @@
 import axios from "axios";
-import { BASE_API_URL } from "../api/config";
 
-const API_URL = `${BASE_API_URL}/piece`;
+const API_URL = `http://64.176.18.90:8080/piece`;
 
 // Agregar nueva obra
 export const addPiece = async (pieceData) => {
@@ -69,6 +68,7 @@ export const getObrasByType = async (typeId) => {
     const filteredObras = response.data.filter(
       (obra) => obra.typeId === typeId && obra.imageUrls && obra.imageUrls.length > 0
     );
+    
     return filteredObras;
   } catch (error) {
     console.error("Error obteniendo obras por tipo:", error);
