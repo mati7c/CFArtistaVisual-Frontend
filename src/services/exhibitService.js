@@ -1,6 +1,7 @@
 import axios from "axios";
+import { BASE_API_URL } from "../api/config";
 
-const API_URL = `http://64.176.18.90:8080/exhibit`;
+const API_URL = `${BASE_API_URL}/exhibit`;
 
 export const fetchExhibitList = async () => {
   try {

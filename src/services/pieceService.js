@@ -1,6 +1,7 @@
 import axios from "axios";
+import { BASE_API_URL } from "../api/config";
 
-const API_URL = `http://64.176.18.90:8080/piece`;
+const API_URL = `${BASE_API_URL}/piece`;
 
 // Agregar nueva obra
 export const addPiece = async (pieceData) => {
