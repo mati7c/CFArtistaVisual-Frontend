@@ -28,7 +28,7 @@ const Obras = () => {
 
       <Layout>
         <div className="obras-container">
-          <h1 className="obras-title">Elije tu camino</h1>
+          <h1 className="obras-title">Cada medio se presenta como una posibilidad de materializar un sentir profundo, en conexión conmigo misma, a través de la percepción intuitiva y sensible de la naturaleza que me rodea e integra.</h1>
           <div className="obras-options">
             {/* Opción de Pintura */}
             <div className="obra-option" onClick={() => handleOptionClick(4)}>
@@ -36,7 +36,10 @@ const Obras = () => {
                 <img src={PinturaImage} alt="Pintura" className="obra-image" />
               </div>
               <p className="obra-description">
-                La pintura es un viaje hacia lo esencial, donde trazos y colores revelan lo invisible. Un diálogo entre el mundo interno y el externo, transformando el lienzo en huella.
+                Pinturas
+              </p>
+              <p className="obra-description">
+                La potencialidad de la materia pictórica, como experiencia de una dimensión sensible y hacia una expansión de la pintura.
               </p>
             </div>
 
@@ -46,7 +49,10 @@ const Obras = () => {
                 <img src={DibujoImage} alt="Dibujo" className="obra-image" />
               </div>
               <p className="obra-description">
-                El dibujo captura lo efímero en líneas y formas. Un gesto intuitivo que fluye como un paisaje visual, evocando ritmos internos y resonancias sutiles.
+                Dibujos
+              </p>
+              <p className="obra-description">
+                Lo gestual, registros de un instante que deja huella.
               </p>
             </div>
 
@@ -56,12 +62,13 @@ const Obras = () => {
                 <img src={TextilImage} alt="Textil" className="obra-image" />
               </div>
               <p className="obra-description">
-                El textil es un tejido de tiempo y memoria. Hilos y puntadas trazan un mapa de lo vivido, como un eco de la naturaleza que nos habita.
+                Textil
+              </p>
+              <p className="obra-description">
+                La trama del tiempo, hacia una búsqueda interior.
               </p>
             </div>
           </div>
-
-
         </div>
       </Layout>
     </>

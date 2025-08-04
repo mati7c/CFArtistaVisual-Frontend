@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin-top: 200px; /* Añade este margen superior (igual a la altura del header) */
+  margin-top: 13%; /* Añade este margen superior (igual a la altura del header) */
 }
 
 .overlay {
@@ -32,6 +32,7 @@
   line-height: 1.6;
   z-index: 2;
   font-style: italic; /* Aplica cursiva a todo el contenido */
+  
 }
 
 .statement-title {
@@ -39,6 +40,19 @@
   font-weight: bold; /* Negrita */
   font-family: 'Josefin Sans', sans-serif;
 }
+
+.statement-content  {
+  text-align: justify;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.justified-text  {
+  text-align: justify;
+}
+
 
 @media (max-width: 768px) {
   .statement-container {
@@ -56,4 +70,21 @@
     margin-top: 700px; /* Añade este margen superior (igual a la altura del header) */
   }
 
+}
+
+@media (min-width: 1204px) and (max-width: 1366px){
+  .statement-container {
+  position: relative;
+  width: 100%;
+  min-height: 1300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 30%; /* Añade este margen superior (igual a la altura del header) */
+}
 }

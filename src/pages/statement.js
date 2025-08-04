@@ -5,11 +5,14 @@ import Layout from './Layout'; // Importa el Layout
 const Statement = () => (
   <Layout>
   <div className="statement-container">
-    <div className="overlay"></div>
-    <div className="statement-content">
-      <p className="statement-title">Statement</p> {/* Añade una clase para el título */}
+  <div className="overlay"></div>
+  <div className="statement-content">
+    <div className="intro-text">
+      <p className="statement-title">Statement</p>
       <p>Cecilia Ferreyra</p>
-      <p>En mi práctica, habito el proceso. </p>
+      <p>En mi práctica, habito el proceso.</p>
+    </div>
+    <div className="justified-text">
       <p>Desde una conexión profunda con la naturaleza, lo pictórico y la materialidad se abren como puentes entre
       mi mundo interno y el externo. Afuera y adentro dialogan con lo matérico desde una dimensión sensible. En
       esa experiencia, la percepción intuitiva expande lo procesual, y la exploración genera nuevas búsquedas. </p>
@@ -26,6 +29,7 @@ const Statement = () => (
       hacer.</p>
     </div>
   </div>
+</div>
   </Layout>
 );
 

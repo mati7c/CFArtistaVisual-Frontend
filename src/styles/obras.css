@@ -10,11 +10,11 @@
   
   /* Título de la página */
   .obras-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 40px;
     color: #000;
-    padding-top: -10px; /* Espacio adicional arriba del título */
+    padding-top: 5%; /* Espacio adicional arriba del título */
   }
   
   /* Contenedor de las opciones */
@@ -173,7 +173,7 @@
   .obras-container {
     padding-top: 880px;
     padding-bottom: 100px; /* Espacio adicional en la parte superior */
-    margin-top: 400px;
+    margin-top: 150%;
   }
 
   .obra-details {
@@ -190,5 +190,24 @@
     padding: 10px;
     border-radius: 10px;
   }
+
+}
+
+@media (min-width: 1204px) and (max-width: 1366px){
+  .obras-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20%; /* Ajusta según la altura del header */
+    background-color: #d1cfcf; /* Fondo grisáceo claro */
+    min-height: calc(100vh - 150px); /* Asegura que el fondo cubra toda la pantalla */
+    padding-bottom: 0px; /* Espacio adicional en la parte inferior */
+  }
+  .carrusel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
 
 }

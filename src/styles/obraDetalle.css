@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: #d1cfcf;
+    background-color: #b9b8b8;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -77,7 +77,7 @@ body {
 
   
   /* Estilos responsivos */
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     .obra-detalle-container2 {
       flex-direction: column; /* Cambia a columna en pantallas pequeñas */
       align-items: center; /* Centra los elementos */
@@ -111,4 +111,18 @@ body {
     body{
       overflow-x: hidden;
     }
+  }
+
+  @media (min-width: 1204px) and (max-width: 1366px){
+      .obra-detalle-container2 {
+    display: flex;
+    flex-direction: row; /* Cambia a fila para alinear el carrusel y los detalles */
+    align-items: flex-start; /* Alinea los elementos arriba */
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho máximo para evitar espacios vacíos */
+    margin: 0 auto; /* Centra el contenido */
+    gap: 40px; /* Espacio entre el carrusel y los detalles */
+    margin-top: 30%;
+  }
+  
   }

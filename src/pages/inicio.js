@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Fondo_2 from "../images/Fondo -2.jpeg";
 import Fondo_1 from "../images/Fondo -1.jpeg";
 import Fondo0 from "../images/Fondo 0.jpeg";
 import Fondo1 from "../images/Fondo 1.jpg";
@@ -12,7 +11,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const images = [Fondo0, Fondo_1, Fondo_2, Fondo1, Fondo2, Fondo3];
+const images = [Fondo0, Fondo_1, Fondo1, Fondo2, Fondo3];
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

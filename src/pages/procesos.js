@@ -4,6 +4,10 @@ import '../styles/procesos.css'; // Importa los estilos específicos para este c
 import Imagen1 from "../images/WhatsApp Image 2023-04-25 at 9.30.45 AM 1.jpeg";
 import Imagen2 from "../images/WhatsApp Image 2022-10-17 at 5.59.18 PM.jpeg";
 import Imagen3 from "../images/Obra Espacio Verde Cecilia Ferreyra.jpg";
+import Imagen4 from "../images/Proc1.jpeg";
+import Imagen5 from "../images/Proc2.jpeg";
+import Imagen6 from "../images/Proc3.jpeg";
+import Imagen7 from "../images/Proc4.jpeg";
 
 const Procesos = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,19 +44,33 @@ const Procesos = () => {
               <div className="procesos-slide">
                 <img src={Imagen3} alt="Imagen 3" />
               </div>
+              <div className="procesos-slide">
+                <img src={Imagen4} alt="Imagen 4" />
+              </div>
+              <div className="procesos-slide">
+                <img src={Imagen5} alt="Imagen 5" />
+              </div>
+              <div className="procesos-slide">
+                <img src={Imagen6} alt="Imagen 6" />
+              </div>
+              <div className="procesos-slide">
+                <img src={Imagen7} alt="Imagen 7" />
+              </div>
             </div>
           </div>
 
           {/* Texto resumido */}
           <div className="procesos-texto">
             <p>
-              La obra de Cecilia Ferreyra es una búsqueda constante de lo esencial, donde la
-              naturaleza y lo pictórico se entrelazan para crear un diálogo entre el mundo
-              interno y externo. A través de la pintura, el dibujo y el bordado, se exploran
-              texturas, colores y gestos que dejan huella de una experiencia profunda y
-              significativa. Cada obra es un viaje hacia lo invisible, donde la intuición y la
-              materialidad se unen para evocar paisajes visuales y sonoros, invitando al
-              espectador a sumergirse en una dimensión orgánica y etérea.
+              Una búsqueda constante, a través de la exploración matérica y en conexión con la naturaleza.
+            </p>
+            <p>
+              Así la pintura, el dibujo, el textil, sus posibles integraciones, y otras exploraciones con el
+              material, me permiten traer al presente lo que se va hilvanando a través del tiempo. Hay
+              búsquedas que aparecen transitando el proceso mismo, casi imprevisiblemente, otras, que
+              necesitan sedimentarse, dando respuestas y generando nuevas preguntas. Mientras avanzo en
+              este camino, lo experiencial, lo gestual, lo sutil, la huella, lo natural, lo informe, lo imprevisible,
+              van encontrando diferentes formas de manifestarse.
             </p>
           </div>
         </div>
