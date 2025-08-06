@@ -67,7 +67,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin-top: 700px; /* ya existente */
+    margin-top: 250%; /* ya existente */
   }
 
   .statement-content {
