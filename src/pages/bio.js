@@ -9,7 +9,7 @@ import '../styles/bio.css';
 const Bio = () => (
   <Layout>
     <div className="biografia">
-      <h2 className="biografia-h2">Biografía</h2>
+      <h2 className="biografia-h2">Bio</h2>
       <div className="contenido">
         {/* Primera fila: Texto1 e Imagen1 */}
         <div className="fila">

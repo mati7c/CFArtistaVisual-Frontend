@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: #b9b8b8;
+    background-color: #f7f4f4;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -50,7 +50,7 @@ body {
   }
   
   .detail-box1 {
-    background-color: #E6D5B8; /* Fondo blanco para el cuadro de detalles */
+    background-color: #f0e1c7; /* Fondo blanco para el cuadro de detalles */
     padding: 20px; /* Aumentamos el padding interno */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 4px 4px 4px #be8c6b; /* Sombra para un efecto elevado */

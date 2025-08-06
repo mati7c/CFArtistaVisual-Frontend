@@ -54,8 +54,12 @@
     width: 40%;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.1rem;
+    text-align: justify;
     line-height: 1.6;
     text-align: left;
+  }
+    .procesos-texto p{
+    text-align: justify;
   }
   
   /* Media query para dispositivos móviles */

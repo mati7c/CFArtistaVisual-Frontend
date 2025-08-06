@@ -3,7 +3,7 @@
     text-align: center;
     padding: 20px;
     margin-top: 100px; /* Ajusta según la altura del header */
-    background-color: #d1cfcf; /* Fondo grisáceo claro */
+    background-color: #f7f4f4; /* Fondo grisáceo claro */
     min-height: calc(100vh - 150px); /* Asegura que el fondo cubra toda la pantalla */
     padding-bottom: 0px; /* Espacio adicional en la parte inferior */
   }
@@ -198,7 +198,7 @@
     text-align: center;
     padding: 20px;
     margin-top: 20%; /* Ajusta según la altura del header */
-    background-color: #d1cfcf; /* Fondo grisáceo claro */
+    background-color: #f7f4f4; /* Fondo grisáceo claro */
     min-height: calc(100vh - 150px); /* Asegura que el fondo cubra toda la pantalla */
     padding-bottom: 0px; /* Espacio adicional en la parte inferior */
   }

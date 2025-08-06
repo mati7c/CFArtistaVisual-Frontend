@@ -35,7 +35,7 @@
   right: -300px; 
   width: 250px;
   height: 100vh;
-  background-color: #E6D5B8; /* Color de fondo del menú */
+  background-color: #f0e1c7; /* Color de fondo del menú */
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease;
   display: flex;
