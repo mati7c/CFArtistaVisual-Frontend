@@ -33,12 +33,19 @@ export const addPiece = async (pieceData) => {
 export const fetchPieceList = async () => {
   try {
     const response = await axios.get(`${API_URL}/list`);
-    return response.data;
+    
+    // Ordenar por año (tear) descendente
+    const sortedData = response.data.sort((a, b) => {
+      return Number(b.year) - Number(a.year);
+    });
+    
+    return sortedData;
   } catch (error) {
     console.error("Error fetching obras:", error);
     throw error;
   }
 };
+
 
 // Obtener obra por ID
 export const fetchPieceById = async (id) => {
