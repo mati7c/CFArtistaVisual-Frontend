@@ -33,18 +33,19 @@ export const addPiece = async (pieceData) => {
 export const fetchPieceList = async () => {
   try {
     const response = await axios.get(`${API_URL}/list`);
-    
-    // Ordenar por año (tear) descendente
+    // Ordenar por año (year) descendente
     const sortedData = response.data.sort((a, b) => {
-      return Number(b.year) - Number(a.year);
+      const yearA = parseInt(a.year.trim(), 10);
+      const yearB = parseInt(b.year.trim(), 10);
+      return yearB - yearA; // más reciente primero
     });
-    
     return sortedData;
   } catch (error) {
     console.error("Error fetching obras:", error);
     throw error;
   }
 };
+
 
 
 // Obtener obra por ID
@@ -69,14 +70,24 @@ export const deletePiece = async (id) => {
   }
 };
 
-// Obtener obras filtradas por typeId
+// Obtener obras filtradas por typeId y ordenadas por año
 export const getObrasByType = async (typeId) => {
   try {
     const response = await axios.get(`${API_URL}/list`);
-    const filteredObras = response.data.filter(
-      (obra) => obra.typeId === typeId && obra.imageUrls && obra.imageUrls.length > 0
-    );
     
+    const filteredObras = response.data
+      .filter(
+        (obra) =>
+          obra.typeId === typeId &&
+          obra.imageUrls &&
+          obra.imageUrls.length > 0
+      )
+      .sort((a, b) => {
+        const yearA = parseInt(a.year?.trim?.() || "0", 10);
+        const yearB = parseInt(b.year?.trim?.() || "0", 10);
+        return yearB - yearA; // más recientes primero
+      });
+
     return filteredObras;
   } catch (error) {
     console.error("Error obteniendo obras por tipo:", error);
