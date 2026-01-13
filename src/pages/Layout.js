@@ -5,9 +5,12 @@ import HamburgerMenu from "./hamburgerMenu";
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header /> {/* Header en la parte superior */}
-      <HamburgerMenu /> {/* Menú de hamburguesa */}
-      <main className="flex-grow" >{children}</main> {/* Contenido principal con margen superior */}
+      <Header />
+      <HamburgerMenu />
+      {/* Agregamos 'pt-10' o un estilo directo para asegurar el espacio */}
+      <main className="flex-grow" style={{ marginTop: '10px' }} >
+        {children}
+      </main> 
     </div>
   );
 };

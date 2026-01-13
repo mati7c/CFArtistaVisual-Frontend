@@ -1,22 +1,28 @@
 /* Contenedor principal */
 .lista-obras-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrado horizontal */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: -300px;
-  }
-  
-  /* Título */
-  .lista-obras-container h1 {
+    
+    /* CAMBIO AQUÍ: */
+    /* Antes tenías: margin-top: -300px; */
+    /* Ahora ponemos un margen positivo para separarlo un poco del header */
+    margin-top: 60%; 
+    
+    /* Opcional: Para asegurar que si la lista es gigante no rompa el contenedor */
+    overflow: hidden; 
+}
+/* Título */
+.lista-obras-container h1 {
     font-size: 2rem;
     font-family: 'Josefin Sans', sans-serif;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
-  }
+}
   
   /* Lista de obras */
   .lista-obras {
