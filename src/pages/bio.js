@@ -41,7 +41,7 @@ const Bio = () => (
           <div className="texto">
             <p>
               Entre las muestras se destacan “Naturaleza Habitada”(individual), que recorrió dos espacios expositivos, en Río Ceballos y La Calera. “Pequeña Maduración” (colectiva), en el Museo R. Pedroni; “El amor cambia sus disfraces” muestra colectiva en galería El Paraíso, Museo Mujica Lainez, de La Cumbre. Participación con libro de artista colectivo en Arts Libris Madrid. Instantes Gráficos. Muestra colectiva “Desandando la Huella de la Violencia” en Casona Ismería Agua de Oro, Cba.  
-              “Diálogos Pictóricos” muestra individual en Espacio Marcantoni Arte, Río Ceballos y la última muestra, en Diciembre de 2024 “Atravesar el Paisaje” (individual) en Museo De La Ciudad Luis Biondi, Jesús María.
+              “Diálogos Pictóricos” muestra individual en Espacio Marcantoni Arte, Río Ceballos y la última muestra, en Diciembre de 2024 “Atravesar el Paisaje” (individual) en Museo De La Ciudad Luis Biondi, Jesús María, Muestra Colectiva en Espacio Uq Bar de la ciudad de Unquillo. Y una de las últimas muestras desde  Ocubre 2025 hasta Febrero 2026 “Espesores del Tiempo” Parte 1, muestra colectiva en  el MUMU, ciudad de Córdoba, en el marco de la Especialización en Producción Artística Contemporánea de la Facultad de Artes de la UNC. 
             </p>
           </div>
           <div className="imagen">
